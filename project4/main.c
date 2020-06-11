@@ -81,7 +81,7 @@ unsigned short twi_read16(unsigned char reg){
 	twi_start();
 	twi_write_addr_w(BMP_ADDR_W);
 	twi_write_byte(reg);
-	twi_stop();
+	//twi_stop(); //stop not needed
 	twi_start();
 	twi_write_addr_r(BMP_ADDR_R);
 	data = twi_read_byte();
@@ -92,6 +92,36 @@ unsigned short twi_read16(unsigned char reg){
 	return data;
 }
 
+uint32_t twi_read24REV(unsigned char reg){
+	//format [b1][b2][b3]
+	uint32_t data;
+	twi_start();
+	twi_write_addr_w(BMP_ADDR_W);
+	twi_write_byte(reg);
+	twi_start();
+	twi_write_addr_r(BMP_ADDR_R);
+	data = twi_read_byte();
+	data <<= 8;
+	data |=twi_read_byte();
+	data <<= 8;
+	data |= twi_read_last_byte();
+	twi_stop();
+	return data;
+}
+
+float get_temp(unsigned short dig_T1, signed short dig_T2, signed short dig_T3){
+	int32_t adc_T, var1, var2, temp;
+	adc_T = twi_read24REV(TEMP_REG); //[BYTE][BYTE]XXXX[][][][]
+	adc_T >>= 4; //Get rid of the 4 empty bits at end ^(here)
+	//Calculation arithrmetic found in datasheet.
+	var1 = ((((adc_T>>3) - ((int32_t)dig_T1<<1))) * ((int32_t)dig_T2)) >> 11;
+	var2 = (((((adc_T>>4) - ((int32_t)dig_T1)) * ((adc_T>>4) - ((int32_t)dig_T1))) >> 12) *
+	((int32_t)dig_T3)) >> 14;
+	temp = ((var1 + var2) * 5 + 128) >> 8;
+	return temp/100.0;
+}
+
+
 
 
 
@@ -99,9 +129,6 @@ unsigned short twi_read16(unsigned char reg){
 int main(void)
 {
 	unsigned char temp;
-    //1110111 0x77base addr
-	// 0xEE for write addr
-	//0xEF for read addr
 	
 		//sprintf(result, "%.2f", x); //fix this formatting
 	//This gets the chip ID
@@ -110,7 +137,7 @@ int main(void)
 	twi_start();
 	twi_write_addr_w(BMP_ADDR_W);
 	twi_write_byte(CHIP_ID_REG);//Addr for CHIP ID;
-	twi_stop();
+	//twi_stop(); //stop not needed here
 	twi_start();
 	twi_write_addr_r(BMP_ADDR_R);
 	temp = twi_read_last_byte(); //fix this
@@ -125,17 +152,20 @@ int main(void)
 	dig_T2 = (signed short)twi_read16(dig_T2_REG);
 	dig_T3 = (signed short)twi_read16(dig_T3_REG);
 	
-	
-	
-	
-	
-	
-	
+	//Config
+	twi_start();
+	twi_write_addr_w(BMP_ADDR_W);
+	twi_write_byte(MEAS_CTRL_REG);
+	twi_write_byte(0x93); //0x93 represents the config:
+	//0x93 = 10010011
+	//100 = 8x pres sample, 100 = 8x temp sample, 11 = normal power mode
+	twi_stop();
 	
     while (1) 
     {
-		lcd_put_sshort(dig_T2, 0, 0);
-		lcd_put_sshort(dig_T3, 1, 0);
+		//lcd_put_float(0xF131, 0, 0);
+		lcd_clr();
+		lcd_put_float(get_temp(dig_T1, dig_T2, dig_T3), 1, 0);
 		avr_wait(1000);
     }
 }
