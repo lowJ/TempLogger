@@ -41,6 +41,7 @@ C_SRCS +=  \
 ../keypad.c \
 ../lcd.c \
 ../main.c \
+../twi.c \
 ../volt.c
 
 
@@ -55,6 +56,7 @@ avr.o \
 keypad.o \
 lcd.o \
 main.o \
+twi.o \
 volt.o
 
 OBJS_AS_ARGS +=  \
@@ -62,6 +64,7 @@ avr.o \
 keypad.o \
 lcd.o \
 main.o \
+twi.o \
 volt.o
 
 C_DEPS +=  \
@@ -69,6 +72,7 @@ avr.d \
 keypad.d \
 lcd.d \
 main.d \
+twi.d \
 volt.d
 
 C_DEPS_AS_ARGS +=  \
@@ -76,6 +80,7 @@ avr.d \
 keypad.d \
 lcd.d \
 main.d \
+twi.d \
 volt.d
 
 OUTPUT_FILE_PATH +=project4.elf
@@ -114,6 +119,13 @@ LINKER_SCRIPT_DEP+=
 	
 
 ./main.o: .././main.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\Program Files x86\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Program Files x86\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.4.331\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Program Files x86\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.4.331\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./twi.o: .././twi.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)D:\Program Files x86\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Program Files x86\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.4.331\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Program Files x86\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.4.331\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
