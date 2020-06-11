@@ -134,12 +134,6 @@
     <Compile Include="bmp280.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="keypad.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="keypad.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="lcd.c">
       <SubType>compile</SubType>
     </Compile>
@@ -149,16 +143,16 @@
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="store.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="store.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="twi.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="twi.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="volt.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="volt.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

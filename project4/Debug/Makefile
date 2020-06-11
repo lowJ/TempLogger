@@ -39,11 +39,10 @@ SUBDIRS :=
 C_SRCS +=  \
 ../avr.c \
 ../bmp280.c \
-../keypad.c \
 ../lcd.c \
 ../main.c \
-../twi.c \
-../volt.c
+../store.c \
+../twi.c
 
 
 PREPROCESSING_SRCS += 
@@ -55,38 +54,34 @@ ASM_SRCS +=
 OBJS +=  \
 avr.o \
 bmp280.o \
-keypad.o \
 lcd.o \
 main.o \
-twi.o \
-volt.o
+store.o \
+twi.o
 
 OBJS_AS_ARGS +=  \
 avr.o \
 bmp280.o \
-keypad.o \
 lcd.o \
 main.o \
-twi.o \
-volt.o
+store.o \
+twi.o
 
 C_DEPS +=  \
 avr.d \
 bmp280.d \
-keypad.d \
 lcd.d \
 main.d \
-twi.d \
-volt.d
+store.d \
+twi.d
 
 C_DEPS_AS_ARGS +=  \
 avr.d \
 bmp280.d \
-keypad.d \
 lcd.d \
 main.d \
-twi.d \
-volt.d
+store.d \
+twi.d
 
 OUTPUT_FILE_PATH +=project4.elf
 
@@ -116,13 +111,6 @@ LINKER_SCRIPT_DEP+=
 	@echo Finished building: $<
 	
 
-./keypad.o: .././keypad.c
-	@echo Building file: $<
-	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Program Files x86\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Program Files x86\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.4.331\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Program Files x86\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.4.331\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
 ./lcd.o: .././lcd.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
@@ -137,14 +125,14 @@ LINKER_SCRIPT_DEP+=
 	@echo Finished building: $<
 	
 
-./twi.o: .././twi.c
+./store.o: .././store.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)D:\Program Files x86\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Program Files x86\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.4.331\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Program Files x86\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.4.331\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
-./volt.o: .././volt.c
+./twi.o: .././twi.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)D:\Program Files x86\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Program Files x86\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.4.331\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Program Files x86\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.4.331\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

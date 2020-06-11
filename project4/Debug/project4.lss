@@ -592,8 +592,8 @@ lcd_put_float(float f, unsigned int row, unsigned int col){
      4d8:	08 95       	ret
 
 000004da <main>:
-#include "twi.h"
-#include "bmp280.h"
+
+
 
 int main(void)
 {
@@ -624,8 +624,8 @@ int main(void)
      504:	90 e0       	ldi	r25, 0x00	; 0
      506:	0e 94 2a 02 	call	0x454	; 0x454 <lcd_puts>
      50a:	ff cf       	rjmp	.-2      	; 0x50a <main+0x30>
-		while(1);
-	}
+	
+	//
 	
     while (1) 
     {

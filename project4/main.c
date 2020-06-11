@@ -11,6 +11,8 @@
 #include "twi.h"
 #include "bmp280.h"
 
+
+
 int main(void)
 {
 	lcd_init();
@@ -24,6 +26,12 @@ int main(void)
 		lcd_puts("BMP280 wrong ID");
 		while(1);
 	}
+	//
+	
+	
+	
+	
+	//
 	
     while (1) 
     {

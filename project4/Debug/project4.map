@@ -4,16 +4,12 @@ d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../l
                               bmp280.o (__addsf3)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
                               d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o) (__addsf3x)
-d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
-                              volt.o (__ltsf2)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
                               bmp280.o (__divsf3)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
                               d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o) (__divsf3x)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
                               bmp280.o (__floatsisf)
-d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
-                              d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o) (__fp_cmp)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
                               d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_inf)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
@@ -28,8 +24,6 @@ d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../l
                               d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_split3)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
                               d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_zero)
-d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
-                              volt.o (__gtsf2)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
                               bmp280.o (__mulsf3)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
@@ -41,7 +35,7 @@ d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../l
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
                               D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5/crtatmega32.o (exit)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
-                              keypad.o (__do_copy_data)
+                              lcd.o (__do_copy_data)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
                               bmp280.o (__do_clear_bss)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
@@ -66,6 +60,14 @@ d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../l
                               lcd.o (sprintf)
 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
                               d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o) (__ultoa_invert)
+D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_word.o)
+                              store.o (eeprom_read_word)
+D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_word.o)
+                              store.o (eeprom_update_word)
+D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_block.o)
+                              D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_word.o) (eeprom_read_blraw)
+D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_byte.o)
+                              D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_word.o) (eeprom_update_byte)
 
 Discarded input sections
 
@@ -77,33 +79,6 @@ Discarded input sections
  .text          0x00000000        0x0 bmp280.o
  .data          0x00000000        0x0 bmp280.o
  .bss           0x00000000        0x0 bmp280.o
- .text          0x00000000        0x0 keypad.o
- .data          0x00000000        0x0 keypad.o
- .bss           0x00000000        0x0 keypad.o
- .text.mapIntVal
-                0x00000000       0x10 keypad.o
- .text.mapButton
-                0x00000000        0xa keypad.o
- .text.waitKeypress
-                0x00000000       0xd0 keypad.o
- .text.pressed  0x00000000       0xb4 keypad.o
- .text.waitKeyRelease
-                0x00000000       0x16 keypad.o
- .text.waitPAR  0x00000000       0x16 keypad.o
- .rodata.charmap.1993
-                0x00000000       0x11 keypad.o
- .rodata.intmap.1989
-                0x00000000       0x22 keypad.o
- .debug_info    0x00000000      0x28a keypad.o
- .debug_abbrev  0x00000000      0x147 keypad.o
- .debug_loc     0x00000000      0x354 keypad.o
- .debug_aranges
-                0x00000000       0x48 keypad.o
- .debug_ranges  0x00000000       0xa0 keypad.o
- .debug_line    0x00000000      0x24c keypad.o
- .debug_str     0x00000000      0x1c9 keypad.o
- .comment       0x00000000       0x31 keypad.o
- .debug_frame   0x00000000       0xc8 keypad.o
  .text          0x00000000        0x0 lcd.o
  .data          0x00000000        0x0 lcd.o
  .bss           0x00000000        0x0 lcd.o
@@ -116,42 +91,35 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ .text          0x00000000        0x0 store.o
+ .data          0x00000000        0x0 store.o
+ .bss           0x00000000        0x0 store.o
+ .text.get_value
+                0x00000000       0x24 store.o
+ .text.check_bounds
+                0x00000000       0x10 store.o
+ .text.store_value
+                0x00000000       0x38 store.o
+ .data.cur      0x00000000        0x2 store.o
+ .debug_info    0x00000000      0x161 store.o
+ .debug_abbrev  0x00000000       0xe8 store.o
+ .debug_loc     0x00000000       0xb7 store.o
+ .debug_aranges
+                0x00000000       0x30 store.o
+ .debug_ranges  0x00000000       0x20 store.o
+ .debug_line    0x00000000       0xfa store.o
+ .debug_str     0x00000000      0x1a0 store.o
+ .comment       0x00000000       0x31 store.o
+ .debug_frame   0x00000000       0x44 store.o
  .text          0x00000000        0x0 twi.o
  .data          0x00000000        0x0 twi.o
  .bss           0x00000000        0x0 twi.o
- .text          0x00000000        0x0 volt.o
- .data          0x00000000        0x0 volt.o
- .bss           0x00000000        0x0 volt.o
- .text.getVoltage
-                0x00000000       0x34 volt.o
- .rodata.str1.1
-                0x00000000       0x1a volt.o
- .text.displayM1
-                0x00000000      0x150 volt.o
- .text.displayM0
-                0x00000000       0xd8 volt.o
- .text.update   0x00000000       0x94 volt.o
- .debug_info    0x00000000      0x56a volt.o
- .debug_abbrev  0x00000000      0x16d volt.o
- .debug_loc     0x00000000      0x29e volt.o
- .debug_aranges
-                0x00000000       0x38 volt.o
- .debug_ranges  0x00000000       0x28 volt.o
- .debug_line    0x00000000      0x232 volt.o
- .debug_str     0x00000000      0x1e7 volt.o
- .comment       0x00000000       0x31 volt.o
- .debug_frame   0x00000000       0xc0 volt.o
  .text          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .data          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .bss           0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .text          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
  .data          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
  .bss           0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
- .text          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
- .data          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
- .bss           0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
- .text.avr-libc.fplib
-                0x00000000        0xa d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
  .text          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
  .data          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
  .bss           0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
@@ -161,11 +129,6 @@ Discarded input sections
  .text          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
  .data          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
  .bss           0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
- .text          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
- .data          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
- .bss           0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
- .text.avr-libc.fplib
-                0x00000000       0x48 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
  .text          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
  .data          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
  .bss           0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
@@ -187,11 +150,6 @@ Discarded input sections
  .text          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
  .data          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
  .bss           0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
- .text          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
- .data          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
- .bss           0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
- .text.avr-libc.fplib
-                0x00000000        0xa d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
  .text          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
  .data          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
  .bss           0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
@@ -351,6 +309,46 @@ Discarded input sections
  .text          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
  .data          0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
  .bss           0x00000000        0x0 d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .text          0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_word.o)
+ .data          0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_word.o)
+ .bss           0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_word.o)
+ .text.avr-libc
+                0x00000000        0xc D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_word.o)
+ .debug_line    0x00000000       0x67 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_word.o)
+ .debug_info    0x00000000       0x98 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_word.o)
+ .debug_abbrev  0x00000000       0x14 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_word.o)
+ .debug_aranges
+                0x00000000       0x20 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_word.o)
+ .text          0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_word.o)
+ .data          0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_word.o)
+ .bss           0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_word.o)
+ .text.avr-libc
+                0x00000000        0xc D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_word.o)
+ .debug_line    0x00000000       0x62 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_word.o)
+ .debug_info    0x00000000       0x99 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_word.o)
+ .debug_abbrev  0x00000000       0x14 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_word.o)
+ .debug_aranges
+                0x00000000       0x20 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_word.o)
+ .text          0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_block.o)
+ .data          0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_block.o)
+ .bss           0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_block.o)
+ .text.avr-libc
+                0x00000000       0x20 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_block.o)
+ .debug_line    0x00000000       0xab D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_block.o)
+ .debug_info    0x00000000       0x99 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_block.o)
+ .debug_abbrev  0x00000000       0x14 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_block.o)
+ .debug_aranges
+                0x00000000       0x20 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eerd_block.o)
+ .text          0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_byte.o)
+ .data          0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_byte.o)
+ .bss           0x00000000        0x0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_byte.o)
+ .text.avr-libc
+                0x00000000       0x22 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_byte.o)
+ .debug_line    0x00000000       0xb0 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_byte.o)
+ .debug_info    0x00000000       0x99 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_byte.o)
+ .debug_abbrev  0x00000000       0x14 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_byte.o)
+ .debug_aranges
+                0x00000000       0x20 D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5\libatmega32.a(eeupd_byte.o)
 
 Memory Configuration
 
@@ -369,11 +367,10 @@ Linker script and memory map
 LOAD D:/Program Files x86/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.331/gcc/dev/atmega32/avr5/crtatmega32.o
 LOAD avr.o
 LOAD bmp280.o
-LOAD keypad.o
 LOAD lcd.o
 LOAD main.o
+LOAD store.o
 LOAD twi.o
-LOAD volt.o
 START GROUP
 LOAD d:/program files x86/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP

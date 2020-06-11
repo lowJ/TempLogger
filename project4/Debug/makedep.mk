@@ -6,13 +6,11 @@ avr.c
 
 bmp280.c
 
-keypad.c
-
 lcd.c
 
 main.c
 
-twi.c
+store.c
 
-volt.c
+twi.c
 
