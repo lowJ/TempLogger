@@ -4,6 +4,8 @@
 
 avr.c
 
+bmp280.c
+
 keypad.c
 
 lcd.c
