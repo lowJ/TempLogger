@@ -150,7 +150,7 @@ lcd_put_sshort(unsigned short s, unsigned int row, unsigned int col){
 
 void 
 lcd_put_float(float f, unsigned int row, unsigned int col){
-	char temp[4];
+	char temp[15];
 	sprintf(temp, "%.2f", f);
 	lcd_pos(row, col);
 	lcd_puts(temp);

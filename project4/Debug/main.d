@@ -17,7 +17,7 @@ main.d main.o: .././main.c \
  .././avr.h \
  d:\program\ files\ x86\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
  d:\program\ files\ x86\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\pgmspace.h \
- .././twi.h .././bmp280.h
+ .././twi.h .././bmp280.h .././store.h
 
 d:\program\ files\ x86\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -58,3 +58,5 @@ d:\program\ files\ x86\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\in
 .././twi.h:
 
 .././bmp280.h:
+
+.././store.h:

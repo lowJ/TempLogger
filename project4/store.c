@@ -1,8 +1,8 @@
 #include <avr/eeprom.h>
 #include "store.h"
 //Configure the size of store here
-#define TOP 20
-#define BOTTOM 10
+#define TOP 4
+#define BOTTOM 1
 
 static int size = TOP - BOTTOM + 1;
 static int cur = BOTTOM; //stores the last written value
@@ -10,11 +10,11 @@ static int cur = BOTTOM; //stores the last written value
 unsigned int get_value(int n){
 	int i = cur - n;
 	if(i >= BOTTOM){
-		return eeprom_read_word((unsigned int *)i);
+		return eeprom_read_word((uint16_t*)i);
 	}
 	else{
 		i = TOP - (BOTTOM - i - 1);
-		return eeprom_read_word((unsigned int *)i);
+		return eeprom_read_word((uint16_t*)i);
 	}
 }
 
@@ -33,5 +33,5 @@ void store_value(unsigned int val){
 	else{
 		cur += 1;
 	}
-	eeprom_update_word((unsigned int *)cur, val);
+	eeprom_write_word((uint16_t*)cur, val);
 }
