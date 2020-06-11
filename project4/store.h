@@ -5,6 +5,10 @@
 //consider the case where t > 100; cause 1 deciaml point percision.
 //consider how to handle negative cases
 
+//int cur;
+
+void store_init();
+
 //Convert back by:
 //float x = get_value(i)
 //x = x/100

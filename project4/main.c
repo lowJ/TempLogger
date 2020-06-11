@@ -18,6 +18,7 @@ int main(void)
 {
 	lcd_init();
 	twi_init();
+	//store_init();
 	
 	//init bmp280
 	if(!bmp280_init()){
@@ -33,6 +34,7 @@ int main(void)
 	
 	
 	//
+	avr_wait(500);
 	float temp;
     while (1) 
     {
@@ -43,30 +45,35 @@ int main(void)
 		temp = convert_C_to_F(bmp280_calc_temp());
 		temp = temp * 100;
 		store_value((int)temp);
+		//store_value((int)temp);
 		avr_wait(25);
 		
 		//This entry is always correct.
 		temp = get_value(0);
+		//temp = get_value(0);
 		temp /= 100.0;
 		lcd_put_float(temp, 0, 0);
 		avr_wait(25);
 		
 		//I think get value is off
 		temp = get_value(1);
+		//temp = get_value(1);
 		temp /= 100.0;
 		lcd_put_float(temp, 0, 8);
 		avr_wait(25);
 		
 		temp = get_value(2);
+		//temp = get_value(2);
 		temp /= 100.0;
 		lcd_put_float(temp, 1, 0);
 		avr_wait(25);
 		
 		//fucks with the value here.
 		temp = get_value(3);
+		//temp = get_value(3);
 		temp /= 100.0;
 		lcd_put_float(temp, 1, 8);
-		avr_wait(4000);
+		avr_wait(3000);
     }
 }
 
