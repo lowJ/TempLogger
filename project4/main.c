@@ -18,20 +18,92 @@
 #define BAUDRATE 9600
 #define BRC 51
 
+#define TX_BUFFER_SIZE 64
+#define RX_BUFFER_SIZE 64
 
+char rx_buffer[RX_BUFFER_SIZE];
+char tx_buffer[TX_BUFFER_SIZE];
+int rx_pos = 0;
+int tx_pos = 0;
 
 int test = 0;
-ISR(USART_RXC_vect)
-{
-	lcd_pos(1,test);
-	lcd_put(UDR);
-	test++;
+
+int pause = 0;
+float period;
+
+void clear_rx_buffer(){
+	for(int i = 0; i < RX_BUFFER_SIZE; ++i){
+		rx_buffer[i] = 0;
+	}
 }
-void UART_TxChar(char ch)
+
+void clear_tx_buffer(){
+	for(int i = 0; i < TX_BUFFER_SIZE; ++i){
+		tx_buffer[i] = 0;
+	}
+}
+void send_tx_char(char ch)
 {
 	while (! (UCSRA & (1<<UDRE)));  /* Wait for empty transmit buffer */
 	UDR = ch ;
 }
+void send_tx_string(char s[]){
+	int i; char cur;
+	i=0;
+	cur = s[i];
+	while(cur != '\0'){
+		cur = s[i];
+		send_tx_char(s[i]);
+		i++;
+	}
+}
+
+void read_command(){
+	if(rx_buffer[0] == 'p'){
+		if(pause == 1){
+			pause = 0;
+		}
+		else if(pause == 0){
+			pause = 1;
+		}
+	}
+	else if(rx_buffer[0] == 'n'){
+		int i;
+		char temp[8];
+		temp[0] = rx_buffer[1]; temp[1] = rx_buffer[2]; temp[2] = '\0';
+		sscanf(temp, "%d", &i);
+		if(check_bounds(i)){
+			float val;
+			val = get_value(i);
+			val /= 100;
+			sprintf(temp,"%.2f", val);
+			send_tx_string(temp);
+			send_tx_char('\n');
+		}
+		else{
+			send_tx_string("INVALID INDEX \n");
+		}
+		
+	}
+	else{
+		send_tx_string("INVALID COMMAND \n");
+	}
+}
+
+ISR(USART_RXC_vect)
+{
+	char cur = UDR;
+	rx_buffer[rx_pos] = cur;
+	if(cur == '\n'){
+		rx_pos = 0;
+		read_command();
+		clear_rx_buffer();
+	}
+	else{
+		rx_pos++;
+	}
+}
+
 
 int main(void)
 {
@@ -66,9 +138,6 @@ int main(void)
     while (1) 
     {
 		
-		//UART_TxChar('A');
-		lcd_pos(0,0);
-		lcd_put('\n');
 		avr_wait(1000);
 		
     }
