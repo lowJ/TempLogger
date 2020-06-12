@@ -12,10 +12,21 @@
 #include "bmp280.h"
 #include "store.h"
 
+#include <avr/interrupt.h>
+
 #define F_CPU 8000000
 #define BAUDRATE 9600
 #define BRC 51
 
+
+
+int test = 0;
+ISR(USART_RXC_vect)
+{
+	lcd_pos(1,test);
+	lcd_put(UDR);
+	test++;
+}
 void UART_TxChar(char ch)
 {
 	while (! (UCSRA & (1<<UDRE)));  /* Wait for empty transmit buffer */
@@ -26,6 +37,7 @@ int main(void)
 {
 	lcd_init();
 	twi_init();
+	
 	//store_init();
 	
 	//init bmp280
@@ -39,53 +51,24 @@ int main(void)
 	//
 	
 	
-	UCSRB |= (1 <<RXEN) | (1 << TXEN);
+	
+	UCSRB |= (1 <<RXEN) | (1 << TXEN) | (1 << RXCIE);
 	UCSRC |= (1 << URSEL) | (1 << UCSZ0) | (1 << UCSZ1);
 	UBRRL = BRC;
 	UBRRH = (BRC >> 8);
+	
+	SET_BIT(PORTB, 0);
+	
+	sei(); //from code for RX int
 	
 	//
 	avr_wait(500);
     while (1) 
     {
 		
-		//Correct vlaue , wait 4 cyccles, another correct , etc....
-		
-		/*
-		temp = convert_C_to_F(bmp280_calc_temp());
-		temp = temp * 100;
-		store_value((int)temp);
-		//store_value((int)temp);
-		avr_wait(25);
-		
-		//This entry is always correct.
-		temp = get_value(0);
-		//temp = get_value(0);
-		temp /= 100.0;
-		lcd_put_float(temp, 0, 0);
-		avr_wait(25);
-		
-		//I think get value is off
-		temp = get_value(1);
-		//temp = get_value(1);
-		temp /= 100.0;
-		lcd_put_float(temp, 0, 8);
-		avr_wait(25);
-		
-		temp = get_value(2);
-		//temp = get_value(2);
-		temp /= 100.0;
-		lcd_put_float(temp, 1, 0);
-		avr_wait(25);
-		
-		//fucks with the value here.
-		temp = get_value(3);
-		//temp = get_value(3);
-		temp /= 100.0;
-		lcd_put_float(temp, 1, 8);
-		avr_wait(3000);
-		*/
-		UART_TxChar('A');
+		//UART_TxChar('A');
+		lcd_pos(0,0);
+		lcd_put('\n');
 		avr_wait(1000);
 		
     }
