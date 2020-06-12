@@ -12,7 +12,15 @@
 #include "bmp280.h"
 #include "store.h"
 
+#define F_CPU 8000000
+#define BAUDRATE 9600
+#define BRC 51
 
+void UART_TxChar(char ch)
+{
+	while (! (UCSRA & (1<<UDRE)));  /* Wait for empty transmit buffer */
+	UDR = ch ;
+}
 
 int main(void)
 {
@@ -31,17 +39,19 @@ int main(void)
 	//
 	
 	
-	
+	UCSRB |= (1 <<RXEN) | (1 << TXEN);
+	UCSRC |= (1 << URSEL) | (1 << UCSZ0) | (1 << UCSZ1);
+	UBRRL = BRC;
+	UBRRH = (BRC >> 8);
 	
 	//
 	avr_wait(500);
-	float temp;
     while (1) 
     {
 		
 		//Correct vlaue , wait 4 cyccles, another correct , etc....
 		
-		
+		/*
 		temp = convert_C_to_F(bmp280_calc_temp());
 		temp = temp * 100;
 		store_value((int)temp);
@@ -74,6 +84,10 @@ int main(void)
 		temp /= 100.0;
 		lcd_put_float(temp, 1, 8);
 		avr_wait(3000);
+		*/
+		UART_TxChar('A');
+		avr_wait(1000);
+		
     }
 }
 
