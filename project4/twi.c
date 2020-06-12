@@ -3,9 +3,9 @@
 
 void twi_init(){
 	TWBR = 0x00;
-	TWBR= 0x0C;//double check this
+	TWBR= 0x0C;//set rate of SCL
 }
-//Send start condition
+
 void twi_start(){
 	TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN);
 	while(!(TWCR & (1<<TWINT)));
@@ -15,7 +15,7 @@ void twi_write_addr_w(unsigned char addr){
 	TWDR= addr;
 	TWCR = (1<<TWINT)|(1<<TWEN);
 	while(!(TWCR & (1<<TWINT)));
-	//while((TWSR & (0xF8)) != 0x18); //check status
+	//while((TWSR & (0xF8)) != 0x18);
 }
 
 void twi_write_byte(unsigned char data){
@@ -54,16 +54,16 @@ unsigned char twi_read_last_byte(){
 
 void twi_stop(){
 	TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWSTO);
+	//add check status register
 }
 
+//Format [byte2] [byte1]
 unsigned short twi_read16(unsigned char reg, unsigned char addrw, unsigned char addrr){
 	unsigned short data;
 	unsigned short temp;
-	//Format [b2] [b1]
 	twi_start();
 	twi_write_addr_w(addrw);
 	twi_write_byte(reg);
-	//twi_stop(); //stop not needed
 	twi_start();
 	twi_write_addr_r(addrr);
 	data = twi_read_byte();
@@ -74,8 +74,8 @@ unsigned short twi_read16(unsigned char reg, unsigned char addrw, unsigned char 
 	return data;
 }
 
+//format [byte1][byte2][byte3]
 uint32_t twi_read24REV(unsigned char reg, unsigned char addrw, unsigned char addrr){
-	//format [b1][b2][b3]
 	uint32_t data;
 	twi_start();
 	twi_write_addr_w(addrw);

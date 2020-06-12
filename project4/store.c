@@ -1,23 +1,23 @@
 #include <avr/eeprom.h>
 #include "store.h"
 #include "avr.h"
+
 //Configure the size of store here
-#define TOP 22
+//example: address 22 - address 10
+#define TOP 22 
 #define BOTTOM 10
-#define WIDTH 4
+#define WIDTH 4 //4 bytes wide
 
 static int size = ((TOP - BOTTOM)/WIDTH) + 1;
-//int cur = BOTTOM; //stores the last written value
 
 void store_init(){
 	eeprom_write_byte((uint8_t*)1, BOTTOM);
-	avr_wait(25);
+	avr_wait(25); 
 }
 
 unsigned int get_value(int n){
 	uint16_t cur = eeprom_read_word((uint16_t*)1);
 	avr_wait(25);
-	
 	int i = cur - (n*WIDTH);
 	if(i >= BOTTOM){
 		return eeprom_read_word((uint16_t*)i);

@@ -14,3 +14,5 @@ store.c
 
 twi.c
 
+uart.c
+

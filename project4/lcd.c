@@ -126,17 +126,12 @@ lcd_puts(const char *s)
 	}
 }
 
-
 void 
 lcd_put_ushort(unsigned short s, unsigned int row, unsigned int col){
 	char temp[2];
 	sprintf(temp, "%hu", s);
 	lcd_pos(row, col);
 	lcd_puts(temp);
-	
-	
-			//sprintf(result, "%.2f", x); //fix this formatting
-
 }
 
 void
@@ -145,7 +140,6 @@ lcd_put_sshort(unsigned short s, unsigned int row, unsigned int col){
 	sprintf(temp, "%hi", s);
 	lcd_pos(row, col);
 	lcd_puts(temp);
-	
 }
 
 void 

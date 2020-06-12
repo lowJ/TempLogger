@@ -23,5 +23,5 @@ void lcd_put_ushort(unsigned short s, unsigned int row, unsigned int col);
 void lcd_put_sshort(unsigned short s, unsigned int row, unsigned int col);
 
 void lcd_put_float(float f, unsigned int row, unsigned int col);
-//void lcd_put_sshort(signed short s);
+
 #endif /* _LCD_H_ */

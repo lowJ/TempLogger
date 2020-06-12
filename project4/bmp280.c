@@ -65,7 +65,7 @@ void bmp280_set_config(){
 float bmp280_calc_temp(){
 	int32_t adc_T, var1, var2, temp;
 	adc_T = twi_read24REV(TEMP_REG, BMP_ADDR_W, BMP_ADDR_R); //[BYTE][BYTE]XXXX[][][][]
-	adc_T >>= 4; //Get rid of the 4 empty bits at end ^(here)
+	adc_T >>= 4; 
 	//Calculation arithrmetic found in datasheet.
 	var1 = ((((adc_T>>3) - ((int32_t)dig_T1<<1))) * ((int32_t)dig_T2)) >> 11;
 	var2 = (((((adc_T>>4) - ((int32_t)dig_T1)) * ((adc_T>>4) - ((int32_t)dig_T1))) >> 12) *
