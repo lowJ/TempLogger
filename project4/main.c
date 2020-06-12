@@ -120,9 +120,6 @@ int main(void)
 		lcd_puts("BMP280 wrong ID");
 		while(1);
 	}
-	//
-	
-	
 	
 	UCSRB |= (1 <<RXEN) | (1 << TXEN) | (1 << RXCIE);
 	UCSRC |= (1 << URSEL) | (1 << UCSZ0) | (1 << UCSZ1);
@@ -135,8 +132,35 @@ int main(void)
 	
 	//
 	avr_wait(500);
+	float temp;
     while (1) 
     {
+		//Correct vlaue , wait 4 cyccles, another correct , etc....
+		
+		if(!pause){
+			temp = convert_C_to_F(bmp280_calc_temp()) * 100;
+			store_value((int)temp);
+			avr_wait(25);
+			
+			temp = get_value(0);
+			temp /= 100.0;
+			lcd_put_float(temp, 0, 0);
+			avr_wait(25);
+			
+			temp = get_value(1);
+			temp /= 100.0;
+			lcd_put_float(temp, 0, 8);
+			avr_wait(25);
+			
+			temp = get_value(2);
+			temp /= 100.0;
+			lcd_put_float(temp, 1, 0);
+			avr_wait(25);
+			
+			temp = get_value(3);
+			temp /= 100.0;
+			lcd_put_float(temp, 1, 8);
+		}
 		
 		avr_wait(1000);
 		
