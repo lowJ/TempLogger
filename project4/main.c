@@ -142,27 +142,38 @@ int main(void)
 			store_value((int)temp);
 			avr_wait(25);
 			
+			
 			temp = get_value(0);
 			temp /= 100.0;
-			lcd_put_float(temp, 0, 0);
+			lcd_pos(0,0);
+			lcd_puts("0:");
+			lcd_put_float(temp, 0, 2);
 			avr_wait(25);
 			
 			temp = get_value(1);
 			temp /= 100.0;
-			lcd_put_float(temp, 0, 8);
+			lcd_pos(0,8);
+			lcd_puts("1:");
+			lcd_put_float(temp, 0, 10);
 			avr_wait(25);
 			
 			temp = get_value(2);
 			temp /= 100.0;
-			lcd_put_float(temp, 1, 0);
+			lcd_pos(1,0);
+			lcd_puts("2:");
+			lcd_put_float(temp, 1, 2);
 			avr_wait(25);
 			
 			temp = get_value(3);
 			temp /= 100.0;
-			lcd_put_float(temp, 1, 8);
+			lcd_pos(1,8);
+			lcd_puts("3:");
+			lcd_put_float(temp, 1, 10);
+			
+			
 		}
 		
-		avr_wait(1000);
+		avr_wait(3000);
 		
     }
 }
